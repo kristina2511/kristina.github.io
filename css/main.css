@@ -1,0 +1,338 @@
+
+/* Глобальные стили, применимые к документу в целом*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ol, ul, li {
+	border: 0;
+	font-family: Verdana;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* --------------------- HEADER ----------------------------------- */
+header{
+	font-family: 'Cuprum', sans-serif;
+    max-width: 1600px;
+    margin: 0px auto;
+}
+
+.head-logo{
+/*    display: flex;
+    justify-content: center;*/
+}
+
+.head-logo img{
+    max-width: 900px;
+}
+
+
+/* --------------------- navbar-navigator ------------------------------- */ 
+.navbar {
+	background: #454547;
+}
+
+.navbar *{
+ 	margin: 0;
+ 	padding: 0;
+}
+
+.navbar ul,  
+.navbar ol{
+ 	list-style: none;
+} 
+
+.navbar > ul{
+ 	display: flex;
+ 	justify-content: center;
+} 
+
+.navbar > ul li a{
+ 	display: block;
+ 	background: #ececed;
+ 	padding: 15px 30px 15px 50px;
+ 	font-size: 14px;
+ 	color: #454547;
+ 	text-decoration: none;
+ 	text-transform: uppercase;
+ 	transition: all 0.3s ease;
+}  
+
+.navbar > ul li{
+ 	position: relative;
+} 
+
+.navbar > ul li > a i.fa{
+ 	position: absolute;
+ 	top: 15px;
+ 	left: 12px;
+ 	font-size: 18px;
+}   
+
+.navbar > ul li:first-child{
+ 	border-left: 1px solid #b2b3b5;
+}
+.navbar > ul li:last-child{
+ 	border-right: 1px solid #babbbd;
+} 
+
+.navbar > ul li{
+ 	position: relative;
+ 	border-right: 1px solid #c7c8ca;
+}  
+
+.navbar li a:hover{
+ 	background: #454547;
+ 	color: #ffffff;
+ 	box-shadow: 1px 5px 10px -5px black;
+ 	transition: all 0.3s ease;
+} 
+
+.navbar li ul{
+ 	position: absolute;
+ 	min-width: 150px;
+ 	display: none;
+}
+
+.navbar li > ul li{
+ 	border: 1px solid #c7c8ca;
+}
+
+.navbar li > ul li a{
+ 	padding: 10px;
+ 	text-transform: none;
+} 
+
+.navbar li > ul li ul{
+ 	position: absolute;
+ 	right: -150px;
+ 	top: 0;
+} 
+
+.navbar li:hover > ul{
+ 	display: block;
+ 	z-index: 999;
+}    
+ 
+/* --------------------- navbar-user ------------------------------- */ 
+
+/*.navbar.user{
+	max-width: 1600px;
+	display: inline-flex;
+}*/
+
+.navbar.user > ul{
+ 	justify-content: flex-end;
+} 
+
+.navbar.user > #phone{
+	color: #fff;
+    float: left;
+    font-size: 20px;
+    margin: 12px 50px;
+    font-weight: bold;
+}
+
+
+
+/* --------------------- WRAPPER ----------------------------------- */
+
+.conteiner{
+	display: flex;
+	justify-content: center;
+}
+
+.content {
+	max-width: 1600px;
+}
+
+
+/* --------------------- sidebar ----------------------------------- */
+
+.sidebar {
+    width: 250px;
+    font-family: 'Cuprum', sans-serif;
+    margin: 0 10px 0 10px;
+    display: block;
+    float: left;
+
+    /*border: 1px solid red;*/
+}
+
+.side-menu {
+    margin: 10px;
+    display: block;
+}
+
+.side-menu-header{
+ 	display: block;
+ 	background: #454547;
+ 	color: #ffffff;
+ 	text-align: center;
+ 	text-transform: uppercase;
+ 	text-decoration: underline;
+ 	padding: 10px 30px 10px 30px;	
+}
+
+
+
+.side-menu  ul {
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    list-style-image: none;
+    text-decoration: none;
+}
+
+.side-menu  ul li {
+	padding: 10px;
+    background: #ececed;
+    display: block;
+}
+
+.side-menu  ul li a{
+ 	font-size: 14px;
+ 	color: #454547;
+ 	text-decoration: none;
+} 
+
+
+/* --------------------- all-products ----------------------------------- */
+
+.all-products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    /*border: 1px solid red;*/
+}
+
+.product {
+    border: 1px solid #999;
+    border-radius: 10px;
+	width: 200px;
+	height: 300px;
+	text-align: center;
+	margin: 15px 18px;
+	background: #fafafa;
+	box-shadow: 1px 1px 3px #999;
+	display: block;
+	position: relative;
+}
+
+.product:hover {
+	border: 1px solid #777;
+	box-shadow: 1px 1px 5px #777;
+}
+
+
+
+
+/* --------------------- PRODUCT ----------------------------------- */
+
+/* --------------------- product-preview --------------------------- */
+.photo-preview{
+	margin: 10px;
+}
+.photo-preview img {
+	width: 100%;
+	border-radius: 5px;
+}
+.name-preview {
+	margin: 10px 5px;
+	max-height: 45px;
+}
+.name-preview a {
+	font-size: 14px;
+	color: #000;
+	text-decoration: none;
+}
+.name-preview a:hover {
+	text-decoration: underline;
+}
+
+.price-preview {
+	color: red;
+	margin: 10px 10px 10px 10px;
+	display: inline-block;
+}
+
+.cart-plus-btn-preview {
+	width: 35px;
+	height: 30px;
+	padding-top: 3px;
+	background: #676769;
+	border-radius: 20px;
+    display: inline-block;
+    visibility: hidden;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.product:hover > .cart-plus-btn-preview {
+	visibility: visible;
+	/*transition: 3s ease;*/
+}
+
+/*.product:not(hover) > .cart-plus-btn-preview {
+	visibility: hidden;
+	transition: 3s ease;
+}*/
+
+.cart-plus-btn-preview:hover {
+	background: #454547;
+}
+
+.cart-plus-btn-preview a{
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* --------------------- product-detail --------------------------- */
+
+.product-detail {
+	border: 1px solid #999;
+    border-radius: 10px;
+	width: 900px;
+	height: 1200px;
+	text-align: center;
+	margin: 15px 18px;
+	background: #fafafa;
+	box-shadow: 1px 1px 3px #999;
+	display: block;
+	position: relative;
+}
+
+
+/* --------------------- FOOTER ----------------------------------- */
+footer {
+    border-top: 1px solid #d5d5d5;
+    padding-top: 10px;
+    min-height: 80px;
+    max-width: 1600px;
+    margin: 0px auto;
+    position: relative;
+    background: #454547;
+    clear: both;
+}
+.contacts {
+	margin-left: 50px;
+	float: left;
+}
+
+.copyright {
+	margin-top: 50px;
+	margin-right: 50px;
+	float: right;
+}
+
+.small {
+	color: #999;
+	font-size: 12px;
+}
+
+.small a{
+	color: #999;
+	font-size: 12px;
+}
+
